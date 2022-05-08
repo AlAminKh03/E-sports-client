@@ -1,0 +1,18 @@
+.extra-img img {
+    width: 700px;
+    height: 250px;
+}
+
+.extra-container {
+    background-color: black;
+}
+
+.extra-info {
+    padding: 30px;
+    margin: auto;
+}
+
+.extra-info p {
+    font-style: italic;
+    color: #ffc176;
+}
