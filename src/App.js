@@ -5,8 +5,10 @@ import Home from './Pages/Home/Home/Home';
 import Header from './Pages/Shared/Header/Header';
 import Register from './Pages/Login/Register/Register';
 import Login from './Pages/Login/Login/Login'
-import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import RequireAuth from '../src/Pages/Login/RequireAuth/RequireAuth'
+import ManageProducts from './Pages/ManageProducts/ManageProducts/ManageProducts';
 import AddItems from './Pages/AddItems/AddItems/AddItems';
+
 
 function App() {
   return (
@@ -17,10 +19,17 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/manageproducts' element={
+          <RequireAuth>
+            <ManageProducts></ManageProducts>
+          </RequireAuth>
+        }></Route>
+        <Route path='/addproducts' element={
+          <RequireAuth>
+            <AddItems></AddItems>
+          </RequireAuth>
+        }></Route>
 
-        <Route path='/AddItems' element={<RequireAuth>
-          <AddItems></AddItems>
-        </RequireAuth>}></Route>
 
       </Routes>
     </div>
