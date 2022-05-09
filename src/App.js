@@ -8,6 +8,8 @@ import Login from './Pages/Login/Login/Login'
 import RequireAuth from '../src/Pages/Login/RequireAuth/RequireAuth'
 import ManageProducts from './Pages/ManageProducts/ManageProducts/ManageProducts';
 import AddItems from './Pages/AddItems/AddItems/AddItems';
+import ProductDetail from './Pages/ProductDetail/ProductDetail';
+import Footer from './Pages/Shared/Footer/Footer';
 
 
 function App() {
@@ -19,6 +21,11 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/product/:productId' element={
+          <RequireAuth>
+            <ProductDetail></ProductDetail>
+          </RequireAuth>
+        }></Route>
         <Route path='/manageproducts' element={
           <RequireAuth>
             <ManageProducts></ManageProducts>
@@ -32,6 +39,7 @@ function App() {
 
 
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

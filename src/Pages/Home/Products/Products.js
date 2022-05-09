@@ -1,9 +1,14 @@
+import { Link, useNavigate } from "react-router-dom";
 import useProducts from "../../../Hooks/UseProducts"
 import Product from '../Product/Product';
 import './Products.css'
 
 const Products = () => {
     const [products, setProducts] = useProducts()
+    const navigate = useNavigate()
+    const navigateToProducts = () => {
+        navigate('manageproducts')
+    }
 
     return (
 
@@ -15,6 +20,7 @@ const Products = () => {
                         key={product._id}
                         product={product}
                     ></Product>)}
+                    <button className="text-primary" onClick={navigateToProducts}>Manage Products</button>
                 </div>
             </div>
         </div>
