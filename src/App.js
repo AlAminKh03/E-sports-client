@@ -10,6 +10,7 @@ import ManageProducts from './Pages/ManageProducts/ManageProducts/ManageProducts
 import AddItems from './Pages/AddItems/AddItems/AddItems';
 import ProductDetail from './Pages/ProductDetail/ProductDetail';
 import Footer from './Pages/Shared/Footer/Footer';
+import Blogs from './Pages/Blogs/Blogs';
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
             <AddItems></AddItems>
           </RequireAuth>
         }></Route>
-
+        <Route path='/blog' element={<Blogs></Blogs>}></Route>
 
       </Routes>
       <Footer></Footer>

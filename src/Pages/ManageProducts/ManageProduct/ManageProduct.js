@@ -8,11 +8,13 @@ const ManageProduct = ({ product, handleDeletebutton }) => {
 
 
 
-    const navigate = useNavigate()
+
+    const navigate = useNavigate();
 
     const navigateToProductDetail = _id => {
         navigate(`product/${_id}`)
     }
+
 
     return (
         <div className='product'>
