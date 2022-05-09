@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import useProducts from "../../../Hooks/UseProducts"
 import Product from '../Product/Product';
 import './Products.css'
 
 const Products = () => {
-    const [products, setProducts] = useState([])
-    useEffect(() => {
-        const url = `https://lit-chamber-03250.herokuapp.com/products`
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    const [products, setProducts] = useProducts()
+
     return (
 
         <div id="Products" className='container'>

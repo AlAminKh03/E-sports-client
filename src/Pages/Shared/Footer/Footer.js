@@ -6,7 +6,7 @@ const Footer = () => {
     const year = today.getFullYear();
     return (
         <div className='text-center footer'>
-            <p><small> &copy;Sisir Bindu Travel {year} </small></p>
+            <p><small> &copy;E-Sports {year} </small></p>
         </div>
     );
 };

@@ -8,3 +8,10 @@
 .product img {
     height: 220px;
 }
+
+.product p {
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+    padding-left: 15px;
+}
